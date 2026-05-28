@@ -1,0 +1,38 @@
+schema: '2.0'
+stages:
+  clean:
+    cmd: python src/clean.py
+    deps:
+    - path: data/raw/telco_customer_churn.csv
+      hash: md5
+      md5: 7e1b158d133d438274362d109b76bfa1
+      size: 1955193
+    outs:
+    - path: data/processed/telco_customer_churn_clean.csv
+      hash: md5
+      md5: ebe926e14804c8f75d181e1b26d3d820
+      size: 1000138
+  features:
+    cmd: python src/features.py
+    deps:
+    - path: data/processed/telco_customer_churn_clean.csv
+      hash: md5
+      md5: ebe926e14804c8f75d181e1b26d3d820
+      size: 1000138
+    outs:
+    - path: data/features/telco_customer_churn_features.csv
+      hash: md5
+      md5: 407be7d7861cecc961aba1315966e9a4
+      size: 1554287
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/features/telco_customer_churn_features.csv
+      hash: md5
+      md5: 407be7d7861cecc961aba1315966e9a4
+      size: 1554287
+    outs:
+    - path: models/random_forest_model.pkl
+      hash: md5
+      md5: a134f7e62aba78c7e4b50c5efc66077e
+      size: 10223214
