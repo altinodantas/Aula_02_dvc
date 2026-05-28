@@ -44,11 +44,11 @@ from sklearn.preprocessing import OneHotEncoder
 # -----------------------------------------------------------------------------
 
 INPUT_DATA_PATH = Path(
-    "../data/processed/telco_customer_churn_clean.csv"
+    "data/processed/telco_customer_churn_clean.csv"
 )
 
 OUTPUT_DATA_PATH = Path(
-    "../data/features/telco_customer_churn_features.csv"
+    "data/features/telco_customer_churn_features.csv"
 )
 
 TARGET_COLUMN = "Churn"

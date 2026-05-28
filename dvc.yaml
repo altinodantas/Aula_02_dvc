@@ -1,26 +1,22 @@
 stages:
-  ingest:
-    cmd: python src/ingest.py
-    outs:
-      - data/raw
 
   clean:
     cmd: python src/clean.py
     deps:
-      - data/raw
+      - data/raw/telco_customer_churn.csv
     outs:
-      - data/processed
+      - data/processed/telco_customer_churn_clean.csv
 
   features:
     cmd: python src/features.py
     deps:
-      - data/processed
+      - data/processed/telco_customer_churn_clean.csv
     outs:
-      - data/features
+      - data/features/telco_customer_churn_features.csv
 
   train:
     cmd: python src/train.py
     deps:
-      - data/features
+      - data/features/telco_customer_churn_features.csv
     outs:
-      - models/model.pkl
+      - models/random_forest_model.pkl

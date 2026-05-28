@@ -60,19 +60,19 @@ from sklearn.model_selection import train_test_split
 # -----------------------------------------------------------------------------
 
 INPUT_DATA_PATH = Path(
-    "../data/features/telco_customer_churn_features.csv"
+    "data/features/telco_customer_churn_features.csv"
 )
 
 MODEL_OUTPUT_PATH = Path(
-    "../models/random_forest_model.pkl"
+    "models/random_forest_model.pkl"
 )
 
 METRICS_OUTPUT_PATH = Path(
-    "../reports/metrics.json"
+    "reports/metrics.json"
 )
 
 CLASSIFICATION_REPORT_PATH = Path(
-    "../reports/classification_report.txt"
+    "reports/classification_report.txt"
 )
 
 TARGET_COLUMN = "Churn"

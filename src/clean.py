@@ -41,9 +41,9 @@ from sklearn.preprocessing import StandardScaler
 # CONFIGURAÇÃO
 # -----------------------------------------------------------------------------
 
-RAW_DATA_PATH = Path("../data/raw/telco_customer_churn.csv")
+RAW_DATA_PATH = Path("data/raw/telco_customer_churn.csv")
 PROCESSED_DATA_PATH = Path(
-    "../data/processed/telco_customer_churn_clean.csv"
+    "data/processed/telco_customer_churn_clean.csv"
 )
 
 TARGET_COLUMN = "Churn"
