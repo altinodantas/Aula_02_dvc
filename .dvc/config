@@ -1,6 +1,11 @@
 [core]
-    remote = buckets3
+    remote = gdrive
 ['remote "localstorage"']
     url = /tmp/dvc-storage
 ['remote "buckets3"']
     url = s3://dvc-test-inf
+['remote "gdrive"']
+    url = gdrive://1P5eQTvb5-T85wj4bomUXG3f8yqOjy-ta
+    gdrive_acknowledge_abuse = true
+    gdrive_client_id = 814002043466-ho89q6ffoa2639fatvk5qo0s3pmf8ijk.apps.googleusercontent.com
+    gdrive_client_secret = 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
