@@ -1,4 +1,6 @@
 [core]
-    remote = localstorage
+    remote = buckets3
 ['remote "localstorage"']
     url = /tmp/dvc-storage
+['remote "buckets3"']
+    url = s3://dvc-test-inf
