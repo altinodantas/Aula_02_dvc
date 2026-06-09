@@ -8,6 +8,10 @@ Este guia fornece o passo a passo completo para configurar um bucket do Amazon S
 * Repositório Git inicializado (`git init`)
 * DVC instalado no projeto (`dvc init`)
 
+Para se ter uma primeira versão dos dados para o arquivo **telco_customer_churn.csv** pode se executar o comando abaixo:
+```bash
+dvc get https://github.com/altinodantas/datasets/ telco_customer_churn.csv -o data/raw/telco_customer_churn.csv
+```
 ---
 
 ## Passo 1: Configuração no Console da AWS
