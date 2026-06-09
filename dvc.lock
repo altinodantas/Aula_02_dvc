@@ -5,8 +5,8 @@ stages:
     deps:
     - path: data/raw/telco_customer_churn.csv
       hash: md5
-      md5: 7e1b158d133d438274362d109b76bfa1
-      size: 1955193
+      md5: 9cbf5a7037b4b19340af117623b6b41e
+      size: 1954033
     outs:
     - path: data/processed/telco_customer_churn_clean.csv
       hash: md5
