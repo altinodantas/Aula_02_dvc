@@ -1,5 +1,5 @@
 [core]
-    remote = buckets3
+    remote = gdrive
 ['remote "localstorage"']
     url = /tmp/dvc-storage
 ['remote "buckets3"']

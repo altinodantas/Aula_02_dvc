@@ -174,3 +174,18 @@ dvc remote modify meu-gdrive gdrive_client_secret "SUA_CHAVE_SECRETA_AQUI"
 git add .dvc/config
 git commit -m "Configura Google Drive personalizado como remote storage"
 ```
+
+## Problemas de autentificação
+
+Caso a aplicação esteja em teste, após 7 dias, o token OAuth vai expirar e um erro como o seguinte pode ser visto
+ao se executar alguma ação do DVC que exige a integração com a api do Google Drive.
+```bash
+ERROR: unexpected error - Failed to authenticate GDrive: Access token refresh failed: invalid_grant: Bad Request   
+```
+Duas formas de contornar:
+1. Acesso o painel do Google Cloud e publicar o app;
+2. Excluir o default.json que contém o token inválido e executar novamente o login via web.
+O local do arquivo pode variar a depender do SO:
+   - **Linux**: `~/.cache/pydrive2fs/://googleusercontent.com`
+   - **macOS**: `~/Library/Caches/pydrive2fs/://googleusercontent.com`
+   - **Windows**: `%LOCALAPPDATA%\pydrive2fs\apps.googleusercontent.com\default.json`
